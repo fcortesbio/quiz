@@ -1,0 +1,1 @@
+An interactive quiz app that loads questions and options from a JSON file. Users get real-time feedback for their answers, with optional custom feedback per choice. The app tracks incorrect attempts, shuffles options, and ensures users select the correct answer before proceeding to the next question.
