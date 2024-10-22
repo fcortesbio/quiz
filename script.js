@@ -22,7 +22,7 @@ function loadQuestion(questionData) {
   nextBtn.style.display = "none";
   selectedIncorrect.clear();
 
-  // Retrieve the current question and convert markdown to HTML
+  // Retrieve the current question and turn markdown to HTML
   const question = questionData[currentQuestionIndex];
   questionEl.innerHTML = marked.parse(question.question); // Parse markdown to HTML
 
@@ -30,9 +30,9 @@ function loadQuestion(questionData) {
   const options = [...question.options]; // Make a copy of options in array
   shuffle(options);
 
-  // Determine correct index based on original options
-  const correctOption = question.options[0]; // The correct option is always the first in original order
-  const correctIndex = options.indexOf(correctOption); // Find its index after shuffling
+  // Find the correct option index based on the original unshuffled order
+  const correctOption = question.options[0][0]; // The correct option is always the first one in the original structure
+  const correctIndex = options.findIndex(opt => opt[0] === correctOption);
 
   // Clear old buttons
   optionsContainer.innerHTML = "";
@@ -40,12 +40,10 @@ function loadQuestion(questionData) {
   // Add new option buttons and render markdown for options
   options.forEach((option, i) => {
     const button = document.createElement("button");
-    button.innerHTML = marked.parseInline(option); // Parse markdown for options
+    button.innerHTML = marked.parseInline(option[0]); // Parse markdown for options
     button.setAttribute("data-index", i); // Store index of shuffled options
-    button.addEventListener(
-      "click",
-      (event) => handleOptionClick(event, correctIndex), // Pass the correct index
-    );
+    button.setAttribute("data-feedback", option[1]); // Store personalized feedback
+    button.addEventListener("click", (event) => handleOptionClick(event, correctIndex));
     optionsContainer.appendChild(button);
   });
 }
@@ -53,18 +51,17 @@ function loadQuestion(questionData) {
 // Handle the option click
 function handleOptionClick(event, correctIndex) {
   const selectedIndex = parseInt(event.target.getAttribute("data-index"));
+  const personalizedFeedback = event.target.getAttribute("data-feedback");
 
   if (selectedIndex === correctIndex) {
-    feedbackEl.innerText = "Correct! Well done!";
+    feedbackEl.innerText = personalizedFeedback || "Correct! Well done!";
     feedbackEl.style.color = "green";
     nextBtn.style.display = "inline-block";
     // Disable all buttons after correct selection
-    Array.from(optionsContainer.children).forEach(
-      (btn) => (btn.disabled = true),
-    );
+    Array.from(optionsContainer.children).forEach((btn) => (btn.disabled = true));
   } else {
     if (!selectedIncorrect.has(selectedIndex)) {
-      feedbackEl.innerText = "Incorrect! Try again.";
+      feedbackEl.innerText = personalizedFeedback || "Incorrect! Try again.";
       feedbackEl.style.color = "red";
       selectedIncorrect.add(selectedIndex); // Track incorrect answers
 
