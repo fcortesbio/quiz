@@ -1,0 +1,37 @@
+[
+  {
+    "question": "Which of the following is the **first step** in the ADDIE model?",
+    "options": ["Analysis", "Design", "Development", "Evaluation"]
+  },
+  {
+    "question": "What is **scaffolding** in instructional design?",
+    "options": [
+      "Providing temporary support to learners",
+      "Assessing learner outcomes",
+      "Creating learning objectives",
+      "Designing multimedia content"
+    ]
+  },
+  {
+    "question": "Which principle refers to breaking down learning into manageable chunks?",
+    "options": ["Chunking", "Alignment", "Assessment", "Feedback"]
+  },
+  {
+    "question": "What is the **primary focus** of formative assessment?",
+    "options": [
+      "Improving learning during the instructional process",
+      "Grading learner performance",
+      "Evaluating the effectiveness of the program",
+      "Measuring long-term retention"
+    ]
+  },
+  {
+    "question": "In Gagné’s Nine Events of Instruction, what follows gaining learners' attention?",
+    "options": [
+      "Informing learners of objectives",
+      "Stimulating recall of prior learning",
+      "Presenting the content",
+      "Assessing performance"
+    ]
+  }
+]

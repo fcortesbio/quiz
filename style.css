@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+#quiz {
+    text-align: center;
+    width: 70%; /* Increased width for a more slide-like appearance */
+    max-width: 800px; /* Maximum width for larger screens */
+    padding: 2rem; /* Added padding for spacing */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    background-color: #f8f9fa; /* Light background for the quiz container */
+    margin-top: 10%; /* Adjusted margin to position it higher */
+}
+
+.question {
+    background-color: #99bfbf;
+    color: #000;
+    padding: 1.5rem; /* Increased padding for question */
+    font-size: 1.75rem; /* Slightly larger font size */
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+button {
+    background-color: #d1e7f1;
+    color: #000;
+    padding: 1.5rem; /* Increased button padding */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #b8d2e0;
+}
+
+/* Keyframes for shake animation */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes for flash animation */
+@keyframes flash {
+    0% {
+        background-color: #f8d7da;
+    } /* Initial wrong answer color */
+    50% {
+        background-color: #f5c6cb;
+    } /* Slightly lighter color */
+    100% {
+        background-color: #f8d7da;
+    } /* Return to original wrong answer color */
+}
+
+/* Styles for wrong answer button */
+button.wrong-answer {
+    background-color: #f8d7da; /* Red background for wrong answers */
+    color: red; /* Red text for wrong answers */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Applying flash animation for wrong answers */
+button.wrong-answer.flash {
+    animation: flash 0.5s; /* Use flash animation */
+}
+
+/* Styles for incorrect buttons with shake effect */
+button.incorrect {
+    animation: shake 0.5s; /* Shake effect */
+}

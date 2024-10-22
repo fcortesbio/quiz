@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.5" />
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <title>Quiz App</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <section id="quiz">
+                <h2 class="question">Loading question...</h2>
+                <div class="options">
+                    <!-- Option buttons will be dynamically inserted here -->
+                </div>
+                <div id="feedback" class="feedback"></div>
+                <button
+                    id="next-btn"
+                    style="display: none"
+                    aria-label="Next question"
+                >
+                    Next Question
+                </button>
+                <div id="error-message" style="color: red; display: none"></div>
+                <!-- Error message section -->
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
