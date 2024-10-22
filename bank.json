@@ -1,17 +1,107 @@
 [
   {
-    "question": "Which of the following is the **first step** in the ADDIE model?",
+    "question": "Which planet is known as the Red Planet?",
     "options": [
       [
-        "Analysis",
-        "Exactly! A prior analysis will ensure the design and all further steps are aligned with learning goals"
+        "Mars",
+        "Exactly! Mars is known as the Red Planet due to its iron oxide surface."
       ],
       [
-        "Design",
-        "Quite close, there's something else before starting the design phase"
+        "Jupiter",
+        "Not quite. Jupiter is the largest planet but not known for its red color."
       ],
-      ["Development", "Let's try again."],
-      ["Evaluation", ""]
+      [
+        "Saturn",
+        "Close, but Saturn is famous for its rings."
+      ],
+      [
+        "Venus",
+        "Venus is often called Earth's twin, not the Red Planet."
+      ]
+    ]
+  },
+  {
+    "question": "What is the capital of France?",
+    "options": [
+      [
+        "Paris",
+        "Correct! Paris is known as the City of Light."
+      ],
+      [
+        "London",
+        "Not quite. London is the capital of the UK."
+      ],
+      [
+        "Berlin",
+        "Berlin is the capital of Germany, not France."
+      ],
+      [
+        "Madrid",
+        "Madrid is the capital of Spain."
+      ]
+    ]
+  },
+  {
+    "question": "What is the boiling point of water at sea level?",
+    "options": [
+      [
+        "100°C",
+        "Correct! Water boils at 100°C at sea level."
+      ],
+      [
+        "90°C",
+        "Almost! Water boils at a higher temperature."
+      ],
+      [
+        "80°C",
+        "That's too low for the boiling point of water."
+      ],
+      [
+        "120°C",
+        "That's higher than the boiling point at sea level."
+      ]
+    ]
+  },
+  {
+    "question": "Which element has the chemical symbol 'O'?",
+    "options": [
+      [
+        "Oxygen",
+        "Exactly! 'O' stands for Oxygen."
+      ],
+      [
+        "Gold",
+        "Gold's symbol is 'Au', not 'O'."
+      ],
+      [
+        "Osmium",
+        "Osmium is represented by 'Os'."
+      ],
+      [
+        "Hydrogen",
+        "Hydrogen's symbol is 'H', not 'O'."
+      ]
+    ]
+  },
+  {
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "options": [
+      [
+        "William Shakespeare",
+        "Correct! Shakespeare is the author of this famous play."
+      ],
+      [
+        "Mark Twain",
+        "Mark Twain is known for other works, not 'Romeo and Juliet'."
+      ],
+      [
+        "Charles Dickens",
+        "Dickens wrote novels like 'A Christmas Carol', not this play."
+      ],
+      [
+        "J.K. Rowling",
+        "Rowling is known for the Harry Potter series, not Shakespeare's works."
+      ]
     ]
   }
 ]
